@@ -21,7 +21,7 @@ def get_movies_by_service(service):
     r = requests.get(url = STREAMING_API_URL, headers = STREAMING_SERVICE_CONFIG)
     data = r.json()
     final_data = data['results']
-    print (final_data[0])
+    print (final_data)
     # print(data)
 get_movies_by_service('netflix')
 # def get_movie():
