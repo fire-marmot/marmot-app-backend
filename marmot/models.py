@@ -22,8 +22,8 @@ class User(models.Model):
     userID = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, null=True, blank=True
     )
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    user_name = models.CharField(max_length=30)
+    # last_name = models.CharField(max_length=30)
     liked = ArrayField(models.CharField(max_length=30), blank=True, null=True)
     watched = ArrayField(models.CharField(max_length=30), blank=True, null=True)
 
