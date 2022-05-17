@@ -17,7 +17,8 @@ class MoviesDetail(RetrieveUpdateDestroyAPIView):
     queryset = Movies.objects.all()
     serializer_class = MoviesSerializer
 
-class UserList(ListCreateAPIView):
+class UserList(RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsOwnerOrReadOnly,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
